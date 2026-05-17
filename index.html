@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<!-- saved from url=(0067)file:///Users/noama/Downloads/competitive_pricing_dashboard_18.html -->
+<!-- saved from url=(0042)file:///Users/noama/Downloads/index_1.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Connected Fitness — Competitive Pricing Landscape</title>
   <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -35,545 +34,103 @@
       -webkit-font-smoothing: antialiased;
     }
     .num { font-variant-numeric: tabular-nums; }
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 32px 28px 80px;
-    }
-    header {
-      margin-bottom: 28px;
-    }
-    h1 {
-      font-size: 36px;
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      line-height: 1.05;
-      margin-bottom: 6px;
-    }
-    .subtitle {
-      color: var(--ink-soft);
-      font-size: 15px;
-      font-weight: 400;
-    }
-    .card {
-      background: var(--card);
-      border-radius: 16px;
-      padding: 28px;
-      margin-bottom: 20px;
-      box-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 8px 24px -16px rgba(0,0,0,0.06);
-    }
-    .chart-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 18px;
-    }
-    .chart-title {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--ink-soft);
-    }
-    .toggle {
-      display: inline-flex;
-      background: var(--bg);
-      border-radius: 999px;
-      padding: 4px;
-      gap: 2px;
-    }
-    .toggle button {
-      padding: 8px 18px;
-      border: none;
-      background: transparent;
-      font-family: inherit;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--ink-soft);
-      border-radius: 999px;
-      cursor: pointer;
-      transition: all 0.15s ease;
-    }
-    .toggle button.active {
-      background: var(--ink);
-      color: white;
-    }
-    .toggle button:not(.active):hover {
-      color: var(--ink);
-    }
-    .legend {
-      display: flex;
-      gap: 18px;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 8px;
-      font-size: 13px;
-      color: var(--ink-soft);
-    }
-    .legend-item {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-    }
-    .legend-swatch {
-      width: 14px;
-      height: 14px;
-      border-radius: 3px;
-    }
+    .container { max-width: 1400px; margin: 0 auto; padding: 32px 28px 80px; }
+    header { margin-bottom: 28px; }
+    h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.025em; line-height: 1.05; margin-bottom: 6px; }
+    .subtitle { color: var(--ink-soft); font-size: 15px; font-weight: 400; }
+    .card { background: var(--card); border-radius: 16px; padding: 28px; margin-bottom: 20px; box-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 8px 24px -16px rgba(0,0,0,0.06); }
+    .chart-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 18px; }
+    .chart-title { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); }
+    .toggle { display: inline-flex; background: var(--bg); border-radius: 999px; padding: 4px; gap: 2px; }
+    .toggle button { padding: 8px 18px; border: none; background: transparent; font-family: inherit; font-size: 13px; font-weight: 600; color: var(--ink-soft); border-radius: 999px; cursor: pointer; transition: all 0.15s ease; }
+    .toggle button.active { background: var(--ink); color: white; }
+    .toggle button:not(.active):hover { color: var(--ink); }
+    .legend { display: flex; gap: 18px; justify-content: center; align-items: center; margin-bottom: 8px; font-size: 13px; color: var(--ink-soft); }
+    .legend-item { display: flex; align-items: center; gap: 7px; }
+    .legend-swatch { width: 14px; height: 14px; border-radius: 3px; }
     .swatch-hw { background: var(--hw); }
     .swatch-sub { background: var(--sub); }
     .swatch-amp1 { background: var(--amp-current); }
     .swatch-amp2 { background: var(--amp-proposed); }
-    .chart-wrap {
-      position: relative;
-      height: 480px;
-      width: 100%;
-    }
-    /* Customize section — only Amp Proposed editable */
-    .customize-card {
-      background: var(--amp-bg);
-      border: 1px solid #f5d9c2;
-      border-radius: 16px;
-      padding: 22px 28px;
-      margin-bottom: 20px;
-    }
-    .customize-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
-    .customize-title {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--amp-proposed);
-    }
-    .amp-input-block {
-      background: white;
-      padding: 16px 18px;
-      border-radius: 10px;
-      border: 1px solid #f0d6c0;
-      max-width: 600px;
-    }
-    .amp-input-label {
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--ink-soft);
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .amp-input-label::before {
-      content: "";
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      background: var(--amp-proposed);
-      border-radius: 2px;
-    }
-    .input-group-row {
-      display: flex;
-      gap: 16px;
-    }
-    .input-row {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      flex: 1;
-    }
-    .input-label {
-      font-size: 12px;
-      color: var(--ink-soft);
-      font-weight: 500;
-    }
-    .input-control {
-      display: flex;
-      align-items: center;
-      background: var(--bg);
-      border-radius: 6px;
-      padding: 0 10px;
-      transition: all 0.15s;
-    }
-    .input-control .prefix, .input-control .suffix {
-      font-size: 13px;
-      color: var(--muted);
-      font-weight: 500;
-    }
-    .input-control input {
-      flex: 1;
-      border: none;
-      background: transparent;
-      padding: 9px 6px;
-      font-family: 'Inter', sans-serif;
-      font-variant-numeric: tabular-nums;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--ink);
-      outline: none;
-      width: 100%;
-      min-width: 60px;
-    }
-    .input-control:focus-within {
-      box-shadow: 0 0 0 2px var(--amp-proposed);
-      background: white;
-    }
-    /* Table */
-    .table-card {
-      padding: 0;
-      overflow: hidden;
-    }
-    .table-header {
-      padding: 22px 28px;
-      border-bottom: 1px solid var(--line);
-    }
-    .table-header h3 {
-      font-size: 15px;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      color: var(--ink);
-    }
-    .table-wrap {
-      overflow-x: auto;
-      padding: 8px 0;
-    }
-    table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-    }
-    thead th {
-      padding: 12px 16px;
-      text-align: left;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--muted);
-      border-bottom: 1px solid var(--line);
-      white-space: nowrap;
-      background: var(--card);
-    }
+    .chart-wrap { position: relative; height: 480px; width: 100%; }
+    .customize-card { background: var(--amp-bg); border: 1px solid #f5d9c2; border-radius: 16px; padding: 22px 28px; margin-bottom: 20px; }
+    .customize-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .customize-title { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--amp-proposed); }
+    .amp-input-block { background: white; padding: 16px 18px; border-radius: 10px; border: 1px solid #f0d6c0; max-width: 600px; }
+    .amp-input-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-soft); margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+    .amp-input-label::before { content: ""; display: inline-block; width: 10px; height: 10px; background: var(--amp-proposed); border-radius: 2px; }
+    .input-group-row { display: flex; gap: 16px; }
+    .input-row { display: flex; flex-direction: column; gap: 6px; flex: 1; }
+    .input-label { font-size: 12px; color: var(--ink-soft); font-weight: 500; }
+    .input-control { display: flex; align-items: center; background: var(--bg); border-radius: 6px; padding: 0 10px; transition: all 0.15s; }
+    .input-control .prefix, .input-control .suffix { font-size: 13px; color: var(--muted); font-weight: 500; }
+    .input-control input { flex: 1; border: none; background: transparent; padding: 9px 6px; font-family: 'Inter', sans-serif; font-variant-numeric: tabular-nums; font-size: 14px; font-weight: 600; color: var(--ink); outline: none; width: 100%; min-width: 60px; }
+    .input-control:focus-within { box-shadow: 0 0 0 2px var(--amp-proposed); background: white; }
+    .table-card { padding: 0; overflow: hidden; }
+    .table-header { padding: 22px 28px; border-bottom: 1px solid var(--line); }
+    .table-header h3 { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); }
+    .table-wrap { overflow-x: auto; padding: 8px 0; }
+    table { width: 100%; border-collapse: separate; border-spacing: 0; }
+    thead th { padding: 12px 16px; text-align: left; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--line); white-space: nowrap; background: var(--card); }
     thead th.right { text-align: right; }
-    tbody td {
-      padding: 14px 16px;
-      font-size: 14px;
-      vertical-align: middle;
-      border-bottom: 1px solid var(--line-soft);
-      background: var(--card);
-    }
-    tbody td.right {
-      text-align: right;
-      font-variant-numeric: tabular-nums;
-      font-size: 13px;
-      color: var(--ink);
-    }
-    tbody td.brand {
-      font-weight: 500;
-      color: var(--ink);
-    }
-    /* Outlined Amp rows — full row outlined in brand color */
-    tr.amp-row td {
-      border-top: 2px solid;
-      border-bottom: 2px solid;
-      background: var(--card);
-      font-weight: 600;
-    }
-    tr.amp-row td:first-child {
-      border-left: 2px solid;
-      border-top-left-radius: 6px;
-      border-bottom-left-radius: 6px;
-    }
-    tr.amp-row td:last-child {
-      border-right: 2px solid;
-      border-top-right-radius: 6px;
-      border-bottom-right-radius: 6px;
-    }
+    tbody td { padding: 14px 16px; font-size: 14px; vertical-align: middle; border-bottom: 1px solid var(--line-soft); background: var(--card); }
+    tbody td.right { text-align: right; font-variant-numeric: tabular-nums; font-size: 13px; color: var(--ink); }
+    tbody td.brand { font-weight: 500; color: var(--ink); }
+    tr.amp-row td { border-top: 2px solid; border-bottom: 2px solid; background: var(--card); font-weight: 600; }
+    tr.amp-row td:first-child { border-left: 2px solid; border-top-left-radius: 6px; border-bottom-left-radius: 6px; }
+    tr.amp-row td:last-child { border-right: 2px solid; border-top-right-radius: 6px; border-bottom-right-radius: 6px; }
     tr.amp-row.amp1 td { border-color: var(--amp-current); }
     tr.amp-row.amp2 td { border-color: var(--amp-proposed); }
     tr.amp-row.amp2 td.brand { color: var(--amp-proposed); }
-    /* Add a small spacer above each amp-row so the outline isn't crushed */
     tr.amp-spacer td { padding: 4px 0; border: none; background: var(--card); }
-    .cat-row td {
-      background: #fafaf9;
-      padding: 11px 16px;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--ink-soft);
-      border-bottom: 1px solid var(--line);
-      border-top: 1px solid var(--line);
-    }
-    .source-link {
-      color: var(--ink-soft);
-      text-decoration: none;
-      font-size: 13px;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.15s;
-    }
-    .source-link:hover {
-      color: var(--ink);
-      border-bottom-color: var(--ink);
-    }
-    .commitment-pill {
-      display: inline-block;
-      padding: 3px 10px;
-      border-radius: 999px;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.01em;
-      white-space: nowrap;
-    }
-    .promo-cell {
-      font-size: 12px;
-      color: var(--ink-soft);
-      white-space: nowrap;
-    }
-    /* Business Model Scenarios */
-    .models-card {
-      padding: 28px;
-    }
-    .models-header {
-      margin-bottom: 22px;
-    }
-    .strategy-subtitle {
-      display: block;
-      font-size: 14px;
-      color: var(--ink-soft);
-      margin-top: 6px;
-      font-weight: 400;
-    }
-    .models-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-    .model-item {
-      background: var(--bg);
-      border-radius: 12px;
-      padding: 22px 22px 20px;
-      display: flex;
-      flex-direction: column;
-      border: 1px solid var(--line);
-    }
-    .model-tag {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--amp-proposed);
-      margin-bottom: 12px;
-    }
-    .model-pricing {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-      flex-wrap: wrap;
-      padding-bottom: 16px;
-      margin-bottom: 16px;
-      border-bottom: 1px solid var(--line);
-    }
-    .model-hw, .model-mo {
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--ink);
-      letter-spacing: -0.02em;
-      font-variant-numeric: tabular-nums;
-    }
-    .model-plus {
-      font-size: 18px;
-      color: var(--muted);
-      font-weight: 500;
-    }
-    .model-suffix {
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--ink-soft);
-      letter-spacing: 0;
-    }
-    .model-totals {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-bottom: 14px;
-    }
-    .model-total-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-    .model-total-row .label {
-      font-size: 12px;
-      color: var(--ink-soft);
-      font-weight: 500;
-    }
-    .model-total-row .value {
-      font-size: 14px;
-      color: var(--ink);
-      font-weight: 600;
-      font-variant-numeric: tabular-nums;
-    }
-    .model-note {
-      font-size: 12px;
-      color: var(--ink-soft);
-      line-height: 1.55;
-      flex: 1;
-      padding-top: 12px;
-      border-top: 1px solid var(--line);
-    }
-    @media (max-width: 1100px) {
-      .models-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 700px) {
-      .models-grid { grid-template-columns: 1fr; }
-    }
-    .commitment-yes {
-      background: #fef3eb;
-      color: #b04415;
-    }
-    .commitment-no {
-      background: #ecf6ed;
-      color: #1c6c2c;
-    }
-    .commitment-soft {
-      background: #f0eef8;
-      color: #4a3199;
-    }
-    .footnote {
-      font-size: 12px;
-      color: var(--muted);
-      padding: 18px 28px 22px;
-      border-top: 1px solid var(--line);
-      line-height: 1.6;
-    }
-    .footnote-title {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--ink-soft);
-      margin-bottom: 10px;
-    }
-    .footnote ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px 24px;
-    }
-    .footnote li {
-      padding-left: 14px;
-      position: relative;
-      font-size: 12px;
-      line-height: 1.55;
-      color: var(--ink-soft);
-    }
-    .footnote li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 8px;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--muted);
-    }
-    .footnote li strong {
-      color: var(--ink);
-      font-weight: 600;
-    }
-    @media (max-width: 800px) {
-      .footnote ul { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 800px) {
-      .input-group-row { flex-direction: column; }
-      h1 { font-size: 28px; }
-      .container { padding: 20px 16px 60px; }
-    }
-    /* Tab Navigation */
-    .tab-nav {
-      display: flex;
-      gap: 4px;
-      margin-bottom: 20px;
-      border-bottom: 1px solid var(--line);
-    }
-    .tab-btn {
-      padding: 12px 22px;
-      background: transparent;
-      border: none;
-      font-family: inherit;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--ink-soft);
-      cursor: pointer;
-      border-bottom: 2px solid transparent;
-      transition: all 0.15s ease;
-      margin-bottom: -1px;
-    }
-    .tab-btn:hover {
-      color: var(--ink);
-    }
-    .tab-btn.active {
-      color: var(--ink);
-      border-bottom-color: var(--ink);
-    }
-    .tab-panel {
-      display: none;
-    }
-    .tab-panel.active {
-      display: block;
-    }
-    /* Apps insights */
-    .insights-card {
-      padding: 28px;
-    }
-    .insights-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-    .insight-item {
-      background: var(--bg);
-      border-radius: 10px;
-      padding: 18px 18px 16px;
-      border: 1px solid var(--line);
-    }
-    .insight-tag {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--amp-proposed);
-      margin-bottom: 10px;
-    }
-    .insight-item h3 {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--ink);
-      margin-bottom: 8px;
-      letter-spacing: -0.01em;
-    }
-    .insight-item p {
-      font-size: 12px;
-      color: var(--ink-soft);
-      line-height: 1.55;
-    }
-    .insight-item p strong {
-      color: var(--ink);
-      font-weight: 600;
-    }
-    @media (max-width: 1000px) {
-      .insights-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 700px) {
-      .insights-grid { grid-template-columns: 1fr; }
-    }
+    .cat-row td { background: #fafaf9; padding: 11px 16px; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); border-bottom: 1px solid var(--line); border-top: 1px solid var(--line); }
+    .source-link { color: var(--ink-soft); text-decoration: none; font-size: 13px; border-bottom: 1px solid transparent; transition: border-color 0.15s; }
+    .source-link:hover { color: var(--ink); border-bottom-color: var(--ink); }
+    .commitment-pill { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 600; letter-spacing: 0.01em; white-space: nowrap; }
+    .promo-cell { font-size: 12px; color: var(--ink-soft); white-space: nowrap; }
+    .models-card { padding: 28px; }
+    .models-header { margin-bottom: 22px; }
+    .strategy-subtitle { display: block; font-size: 14px; color: var(--ink-soft); margin-top: 6px; font-weight: 400; }
+    .models-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .model-item { background: var(--bg); border-radius: 12px; padding: 22px 22px 20px; display: flex; flex-direction: column; border: 1px solid var(--line); }
+    .model-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amp-proposed); margin-bottom: 12px; }
+    .model-pricing { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--line); }
+    .model-hw, .model-mo { font-size: 22px; font-weight: 700; color: var(--ink); letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+    .model-plus { font-size: 18px; color: var(--muted); font-weight: 500; }
+    .model-suffix { font-size: 12px; font-weight: 500; color: var(--ink-soft); letter-spacing: 0; }
+    .model-totals { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+    .model-total-row { display: flex; justify-content: space-between; align-items: baseline; }
+    .model-total-row .label { font-size: 12px; color: var(--ink-soft); font-weight: 500; }
+    .model-total-row .value { font-size: 14px; color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+    .model-note { font-size: 12px; color: var(--ink-soft); line-height: 1.55; flex: 1; padding-top: 12px; border-top: 1px solid var(--line); }
+    @media (max-width: 1100px) { .models-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 700px) { .models-grid { grid-template-columns: 1fr; } }
+    .commitment-yes { background: #fef3eb; color: #b04415; }
+    .commitment-no { background: #ecf6ed; color: #1c6c2c; }
+    .commitment-soft { background: #f0eef8; color: #4a3199; }
+    .footnote { font-size: 12px; color: var(--muted); padding: 18px 28px 22px; border-top: 1px solid var(--line); line-height: 1.6; }
+    .footnote-title { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 10px; }
+    .footnote ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; }
+    .footnote li { padding-left: 14px; position: relative; font-size: 12px; line-height: 1.55; color: var(--ink-soft); }
+    .footnote li::before { content: ""; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; border-radius: 50%; background: var(--muted); }
+    .footnote li strong { color: var(--ink); font-weight: 600; }
+    @media (max-width: 800px) { .footnote ul { grid-template-columns: 1fr; } }
+    @media (max-width: 800px) { .input-group-row { flex-direction: column; } h1 { font-size: 28px; } .container { padding: 20px 16px 60px; } }
+    .tab-nav { display: flex; gap: 4px; margin-bottom: 20px; border-bottom: 1px solid var(--line); }
+    .tab-btn { padding: 12px 22px; background: transparent; border: none; font-family: inherit; font-size: 14px; font-weight: 600; color: var(--ink-soft); cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.15s ease; margin-bottom: -1px; }
+    .tab-btn:hover { color: var(--ink); }
+    .tab-btn.active { color: var(--ink); border-bottom-color: var(--ink); }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .insights-card { padding: 28px; }
+    .insights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .insight-item { background: var(--bg); border-radius: 10px; padding: 18px 18px 16px; border: 1px solid var(--line); }
+    .insight-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amp-proposed); margin-bottom: 10px; }
+    .insight-item h3 { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 8px; letter-spacing: -0.01em; }
+    .insight-item p { font-size: 12px; color: var(--ink-soft); line-height: 1.55; }
+    .insight-item p strong { color: var(--ink); font-weight: 600; }
+    @media (max-width: 1000px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 700px) { .insights-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -583,23 +140,20 @@
       <p class="subtitle">Connected fitness hardware &amp; subscription pricing — verified April 28, 2026</p>
     </header>
 
-    <!-- Tab Navigation -->
     <div class="tab-nav">
       <button class="tab-btn active" data-tab="devices">Devices &amp; Hardware</button>
       <button class="tab-btn" data-tab="apps">Fitness Apps</button>
     </div>
 
-    <!-- DEVICES TAB -->
     <div class="tab-panel active" id="tab-devices">
 
-    <!-- Chart Card -->
     <div class="card">
       <div class="chart-header">
         <span class="chart-title" id="chart-title">1-Year Total Cost Comparison</span>
         <div class="toggle" id="year-toggle">
           <button class="active" data-years="1">1 Year</button>
-          <button data-years="2" class="">2 Years</button>
-          <button data-years="3" class="">3 Years</button>
+          <button data-years="2">2 Years</button>
+          <button data-years="3">3 Years</button>
         </div>
       </div>
       <div class="legend">
@@ -611,7 +165,6 @@
       <div class="chart-wrap"><canvas id="chart" style="box-sizing: border-box; display: block; height: 480px; width: 1288px;" width="2576" height="960"></canvas></div>
     </div>
 
-    <!-- Customize Card — Only Amp Proposed editable -->
     <div class="customize-card">
       <div class="customize-header">
         <span class="customize-title">⚙ Customize Amp Proposed Pricing</span>
@@ -638,7 +191,6 @@
       </div>
     </div>
 
-    <!-- Table Card -->
     <div class="card table-card">
       <div class="table-header">
         <h3>Detailed Pricing — All verified directly from each company's website</h3>
@@ -810,14 +362,12 @@
       </div>
     </div>
 
-    <!-- Business Model Scenarios Card -->
     <div class="card models-card">
       <div class="models-header">
         <span class="chart-title">Alternative Business Model Scenarios</span>
         <span class="strategy-subtitle">Pricing structures to explore beyond current Amp models — illustrative only, not in chart</span>
       </div>
       <div class="models-grid">
-
         <div class="model-item">
           <div class="model-tag">Subscription-First</div>
           <div class="model-pricing">
@@ -832,7 +382,6 @@
           </div>
           <div class="model-note">Premium subscription positioning at $149/mo — exceeds Tonal ($59.95) and approaches Tempo's bundled rate. Hardware barrier kept low for entry. Bets entirely on recurring revenue and engagement.</div>
         </div>
-
         <div class="model-item">
           <div class="model-tag">Balanced Premium</div>
           <div class="model-pricing">
@@ -847,7 +396,6 @@
           </div>
           <div class="model-note">Subscription priced above Tonal ($59.95), Peloton ($49.99), and Hydrow ($50). Hardware close to Hydrow LYQUID ($2,950). Positions Amp as a premium product, not a value play.</div>
         </div>
-
         <div class="model-item">
           <div class="model-tag">Hardware-Premium</div>
           <div class="model-pricing">
@@ -862,7 +410,6 @@
           </div>
           <div class="model-note">Hardware approaches Hydrow LYQUID ($2,950) and Tempo Studio Starter ($2,495). Stronger gross margin per unit. 3-year total just under Tonal 2 — premium tier positioning.</div>
         </div>
-
         <div class="model-item">
           <div class="model-tag">Tempo-Style Bundle</div>
           <div class="model-pricing">
@@ -877,7 +424,6 @@
           </div>
           <div class="model-note">$0 upfront. Year 1 covers equipment + sub; drops to $69/mo in Y2+ once equipment is owned. Y1 monthly above Tempo Studio Suite ($140). Premium recurring positioning with zero entry barrier.</div>
         </div>
-
         <div class="model-item">
           <div class="model-tag">Rental Program</div>
           <div class="model-pricing">
@@ -892,7 +438,6 @@
           </div>
           <div class="model-note">All-inclusive rental priced above Peloton Bike+ Rental ($150 + $125/mo). No commitment. Targets premium renters and users who don't want ownership but want full Amp experience.</div>
         </div>
-
         <div class="model-item">
           <div class="model-tag">Hardware-Only (Optional Sub)</div>
           <div class="model-pricing">
@@ -907,23 +452,20 @@
           </div>
           <div class="model-note">Hardware functions independently with basic mode; sub adds full experience. Hardware in Hydrow LYQUID range ($2,950). Removes "what if I cancel?" objection while capturing premium hardware revenue upfront.</div>
         </div>
-
       </div>
     </div>
 
     </div><!-- /tab-devices -->
 
-    <!-- APPS TAB -->
     <div class="tab-panel" id="tab-apps">
 
-      <!-- Apps Chart Card -->
       <div class="card">
         <div class="chart-header">
           <span class="chart-title" id="apps-chart-title">3-Year Cost Comparison — Fitness Apps</span>
           <div class="toggle" id="apps-year-toggle">
-            <button data-years="monthly" class="">Monthly</button>
-            <button class="" data-years="1">1 Year</button>
-            <button data-years="2" class="">2 Years</button>
+            <button data-years="monthly">Monthly</button>
+            <button data-years="1">1 Year</button>
+            <button data-years="2">2 Years</button>
             <button data-years="3" class="active">3 Years</button>
           </div>
         </div>
@@ -932,10 +474,9 @@
           <div class="legend-item"><span class="legend-swatch swatch-amp1"></span>Amp Current</div>
           <div class="legend-item"><span class="legend-swatch swatch-amp2"></span>Amp Proposed (editable)</div>
         </div>
-        <div class="chart-wrap"><canvas id="apps-chart" style="box-sizing: border-box; display: block; height: 0px; width: 0px;" width="0" height="0"></canvas></div>
+        <div class="chart-wrap"><canvas id="apps-chart"></canvas></div>
       </div>
 
-      <!-- Apps Table Card -->
       <div class="card table-card">
         <div class="table-header">
           <h3>Detailed Pricing — Fitness Apps (verified directly from each company's website)</h3>
@@ -1118,50 +659,42 @@
         </div>
       </div>
 
-      <!-- Apps Insights Card -->
       <div class="card insights-card">
         <div class="models-header">
           <span class="chart-title">Key Takeaways — Fitness Apps Landscape</span>
           <span class="strategy-subtitle">Pricing patterns and competitive positioning</span>
         </div>
         <div class="insights-grid">
-
           <div class="insight-item">
             <div class="insight-tag">Mindfulness Tier</div>
             <h3>Headspace &amp; Calm ($69.99/yr)</h3>
             <p>Identical $69.99/yr annual pricing — both at <strong>$5.83/mo annual</strong>, the cheapest premium tier. Calm's monthly is $14.99, Headspace's is $12.99. Mindfulness is the most price-aggressive app vertical.</p>
           </div>
-
           <div class="insight-item">
             <div class="insight-tag">Best Annual Discount</div>
             <h3>Noom &amp; Ladder/Centr (~50–70% off)</h3>
             <p>Noom drops $59 → $17.42/mo on annual (~70% off). Ladder Pro drops $29.99 → $14.99/mo and Centr $29.99 → $15/mo (both 50% off annual). All three lean heavily on annual retention.</p>
           </div>
-
           <div class="insight-item">
             <div class="insight-tag">Premium Hardcap</div>
             <h3>Future ($174/mo avg)</h3>
             <p>Most expensive in the comparison. Standard coach $149/mo, Pro coach $199/mo. Includes dedicated 1-on-1 trainer with daily text check-ins. Closer to in-person training pricing than app-tier.</p>
           </div>
-
           <div class="insight-item">
             <div class="insight-tag">Hidden 3-Month Lock</div>
             <h3>Trainwell ($149/mo, 3-mo billing)</h3>
             <p>Only app in this set with a multi-month billing commitment — billed in 3-month increments at $447 upfront. Comparable to Future's pricing but bundled differently.</p>
           </div>
-
           <div class="insight-item">
             <div class="insight-tag">App vs. 1-on-1 Coaching</div>
             <h3>~5x Price Gap</h3>
             <p>Pure content apps (Apple Fitness+, Strava, Peloton, Centr) cluster $7–$30/mo. Coaching apps (Trainwell, Future) jump to $149–$199/mo. The middle ground from $30–$150 is largely empty.</p>
           </div>
-
           <div class="insight-item">
             <div class="insight-tag">Family-Optimized</div>
             <h3>iFit Pro Family ($39/mo, 5 users)</h3>
             <p>$7.80/user/mo at the family tier — best-in-class for households. Pairs natively with NordicTrack/ProForm/Freemotion equipment. iFit Train ($15/mo) covers app-only individual.</p>
           </div>
-
         </div>
       </div>
 
@@ -1170,36 +703,25 @@
   </div>
 
   <script>
-    // ============== DATA ==============
-    // Amp Current is fixed (not user-editable); Amp Proposed editable via inputs.
-    // Peloton purchase products are consolidated into "Peloton (Buy)".
     const AMP_CURRENT_HW = 1995;
     const AMP_CURRENT_MO = 23;
 
     const products = [
-      // STRENGTH — competitors first
       { id: 'tonal2', name: 'Tonal 2', cat: 'Strength', hw: 4295, mo: 59.95, commitment: '12-mo commitment', commitmentType: 'yes', promo: 'Monthly only — no bundle discounts', url: 'https://tonal.com/products/tonal-2' },
       { id: 'speediance', name: 'Speediance Gym Monster 2 (Average)', cat: 'Strength', hw: 4124, mo: 24.99, commitment: 'No commitment', commitmentType: 'no', promo: 'Sub optional; sale $19.99/mo', url: 'https://www.speediance.com/products/speediance-gym-monster-2' },
       { id: 'lyquid', name: 'Hydrow LYQUID', cat: 'Strength', hw: 2950, mo: 50, commitment: 'Sub required to operate', commitmentType: 'soft', promo: '$600/yr prepaid (no discount)', url: 'https://hydrow.com/products/strength/lyquid/core/' },
-      // STRENGTH — Amp products (rendered at the bottom of Strength section)
       { id: 'amp_current', name: 'Amp — Current Model', cat: 'Strength', hw: AMP_CURRENT_HW, mo: AMP_CURRENT_MO, commitment: '12-mo commitment', commitmentType: 'yes', promo: '—', url: 'https://ampfit.com', isAmp: true, ampType: 'current' },
       { id: 'amp_proposed', name: 'Amp — Proposed Model', cat: 'Strength', hw: 1569, mo: 55, commitment: '12-mo commitment', commitmentType: 'yes', promo: '—', url: 'https://ampfit.com', isAmp: true, ampType: 'proposed' },
-      // CARDIO — Peloton products listed sequentially (not consolidated), then others
       { id: 'peloton_row', name: 'Peloton Row+', cat: 'Cardio', hw: 3495, mo: 49.99, commitment: 'No commitment', commitmentType: 'no', promo: 'Monthly only — no bundle discounts', url: 'https://www.onepeloton.com/shop/row-plus' },
       { id: 'peloton_bikes', name: 'Peloton Bikes (Average)', cat: 'Cardio', hw: 2195, mo: 49.99, commitment: 'No commitment', commitmentType: 'no', promo: 'Monthly only — no bundle discounts', url: 'https://www.onepeloton.com/bike' },
       { id: 'peloton_rental', name: 'Peloton Bike+ Rental', cat: 'Cardio', hw: 150, mo: 125, commitment: 'No commitment, monthly', commitmentType: 'no', promo: 'Monthly only — no bundle discounts', url: 'https://www.onepeloton.com/bike/rentals' },
       { id: 'hydrow_rowers', name: 'Hydrow Rowers (Average)', cat: 'Cardio', hw: 2162, mo: 50, commitment: 'No commitment, sub optional', commitmentType: 'no', promo: '$600/yr prepaid (no discount)', url: 'https://hydrow.com/' },
       { id: 'ergatta', name: 'Ergatta Rowers (Average)', cat: 'Cardio', hw: 1949, mo: 39, commitment: 'No commitment', commitmentType: 'no', promo: '1yr $390 / 3yr $1,044 / 5yr $1,620', url: 'https://ergatta.com/pages/membership' },
       { id: 'tempo', name: 'Tempo (Average)', cat: 'Cardio', hw: 0, mo: 109, mo_after_y1: 39, commitment: '12-mo commitment', commitmentType: 'yes', promo: '12mo / 24mo prepaid (savings)', url: 'https://tempo.fit/shop', special: 'tempo' },
-      // SLEEP
       { id: 'eight_sleep', name: 'Eight Sleep Pod 5 Core (Enhanced Autopilot)', cat: 'Sleep', hw: 2849, mo: 25, commitment: '12-mo commitment', commitmentType: 'yes', promo: 'Annual only ($299/yr Enhanced)', url: 'https://www.eightsleep.com/product/pod-cover/' },
-      // WEARABLE
       { id: 'whoop', name: 'WHOOP (Average — One + Peak + Life)', cat: 'Wearable', hw: 0, mo: 22.14, commitment: '12-mo commitment', commitmentType: 'yes', promo: '$199 / $239 / $359 yr → $265.67/yr avg', url: 'https://www.whoop.com/us/en/membership/' },
     ];
 
-    // ============== APPS DATA ==============
-    // Pure-app fitness subscriptions (no hardware). Tiers consolidated/averaged like product tab.
-    // Verified directly from each company's website on April 28, 2026.
     const apps = [
       { id: 'apple_fitness', name: 'Apple Fitness+', cat: 'App', mo: 9.99, mo_annual: 6.67, commitment: 'No commitment', commitmentType: 'no', promo: '$9.99/mo or $79.99/yr', url: 'https://www.apple.com/apple-fitness-plus/' },
       { id: 'strava', name: 'Strava Premium', cat: 'App', mo: 11.99, mo_annual: 6.67, commitment: 'No commitment', commitmentType: 'no', promo: '$11.99/mo or $79.99/yr', url: 'https://www.strava.com/pricing' },
@@ -1213,12 +735,10 @@
       { id: 'ladder', name: 'Ladder Pro', cat: 'App', mo: 29.99, mo_annual: 14.99, commitment: 'No commitment', commitmentType: 'no', promo: '$29.99/mo or $179.99/yr ($14.99/mo)', url: 'https://www.joinladder.com/pricing' },
       { id: 'trainwell', name: 'Trainwell (1-on-1 coaching)', cat: 'App', mo: 149, mo_annual: null, commitment: '3-mo billing increments', commitmentType: 'yes', promo: '$149/mo (3-mo billing)', url: 'https://www.trainwell.net/' },
       { id: 'future', name: 'Future (Average, 1-on-1 coaching)', cat: 'App', mo: 174, mo_annual: null, commitment: 'No commitment', commitmentType: 'no', promo: 'Standard $149 / Pro $199', url: 'https://future.co/' },
-      // AMP — Subscription cost only (hardware shown on Devices tab)
       { id: 'amp_current_app', name: 'Amp — Current Model (sub only)', cat: 'App', mo: 23, mo_annual: null, commitment: '12-mo commitment', commitmentType: 'yes', promo: '—', url: 'https://ampfit.com', isAmp: true, ampType: 'current' },
       { id: 'amp_proposed_app', name: 'Amp — Proposed Model (sub only)', cat: 'App', mo: 55, mo_annual: null, commitment: '12-mo commitment', commitmentType: 'yes', promo: '—', url: 'https://ampfit.com', isAmp: true, ampType: 'proposed' },
     ];
 
-    // Compute total for given years
     function getTotals(p, years) {
       let hw = p.hw;
       let sub;
@@ -1231,7 +751,6 @@
       return { hw, sub, total: hw + sub };
     }
 
-    // Live Amp Proposed pricing (Current is fixed)
     function getLiveProducts() {
       const amp2Hw = parseFloat(document.getElementById('amp2_hw').value) || 0;
       const amp2Mo = parseFloat(document.getElementById('amp2_mo').value) || 0;
@@ -1241,21 +760,15 @@
       });
     }
 
-    function fmt(n) {
-      return '$' + Math.round(n).toLocaleString();
-    }
-    function fmtMo(n) {
-      return '$' + Number(n).toFixed(2);
-    }
+    function fmt(n) { return '$' + Math.round(n).toLocaleString(); }
+    function fmtMo(n) { return '$' + Number(n).toFixed(2); }
 
-    // ============== CHART ==============
     let chart;
     let currentYears = 1;
 
     function buildChart() {
       const live = getLiveProducts();
       const sorted = [...live].sort((a, b) => getTotals(b, currentYears).total - getTotals(a, currentYears).total);
-
       const labels = sorted.map(p => {
         let l = p.name;
         if (l.includes('Speediance')) return 'Speediance';
@@ -1273,11 +786,9 @@
         if (l.includes('Amp — Proposed')) return 'Amp Proposed';
         return l;
       });
-
       const hwData = sorted.map(p => getTotals(p, currentYears).hw);
       const subData = sorted.map(p => getTotals(p, currentYears).sub);
       const totals = sorted.map(p => getTotals(p, currentYears).total);
-
       const hwColors = sorted.map(p => {
         if (p.ampType === 'current') return '#111111';
         if (p.ampType === 'proposed') return '#d4501e';
@@ -1289,7 +800,13 @@
         return '#a8a8a4';
       });
 
-      const ctx = document.getElementById('chart').getContext('2d');
+      // FIX: Reset canvas attributes so Chart.js can re-measure correctly
+      const canvas = document.getElementById('chart');
+      canvas.removeAttribute('width');
+      canvas.removeAttribute('height');
+      canvas.style.width = '';
+      canvas.style.height = '';
+      const ctx = canvas.getContext('2d');
       if (chart) chart.destroy();
 
       chart = new Chart(ctx, {
@@ -1298,87 +815,26 @@
         data: {
           labels,
           datasets: [
-            {
-              label: 'Hardware',
-              data: hwData,
-              backgroundColor: hwColors,
-              borderRadius: { topLeft: 0, topRight: 0, bottomLeft: 4, bottomRight: 4 },
-              borderSkipped: false,
-              stack: 'a',
-              datalabels: { display: false },
-            },
-            {
-              label: 'Subscription',
-              data: subData,
-              backgroundColor: subColors,
-              borderRadius: { topLeft: 4, topRight: 4, bottomLeft: 0, bottomRight: 0 },
-              borderSkipped: false,
-              stack: 'a',
-              datalabels: {
-                display: true,
-                anchor: 'end',
-                align: 'top',
-                offset: 4,
-                color: '#111',
-                font: {
-                  family: 'Inter, sans-serif',
-                  weight: 700,
-                  size: 12,
-                },
-                formatter: (value, ctx) => fmt(totals[ctx.dataIndex]),
-              },
-            },
+            { label: 'Hardware', data: hwData, backgroundColor: hwColors, borderRadius: { topLeft: 0, topRight: 0, bottomLeft: 4, bottomRight: 4 }, borderSkipped: false, stack: 'a', datalabels: { display: false } },
+            { label: 'Subscription', data: subData, backgroundColor: subColors, borderRadius: { topLeft: 4, topRight: 4, bottomLeft: 0, bottomRight: 0 }, borderSkipped: false, stack: 'a',
+              datalabels: { display: true, anchor: 'end', align: 'top', offset: 4, color: '#111', font: { family: 'Inter, sans-serif', weight: 700, size: 12 }, formatter: (value, ctx) => fmt(totals[ctx.dataIndex]) } },
           ],
         },
         options: {
-          maintainAspectRatio: false,
-          responsive: true,
-          layout: { padding: { top: 30 } },
+          maintainAspectRatio: false, responsive: true, layout: { padding: { top: 30 } },
           scales: {
-            x: {
-              stacked: true,
-              ticks: {
-                font: { family: 'Inter, sans-serif', size: 12, weight: 500 },
-                color: '#333',
-                maxRotation: 45,
-                minRotation: 25,
-                autoSkip: false,
-              },
-              grid: { display: false },
-            },
-            y: {
-              stacked: true,
-              beginAtZero: true,
-              ticks: {
-                font: { family: 'Inter, sans-serif', size: 11 },
-                color: '#888',
-                callback: (v) => '$' + (v / 1000).toFixed(0) + 'k',
-                stepSize: 2000,
-              },
-              grid: { color: '#e8e8e6' },
-              border: { display: false },
-            },
+            x: { stacked: true, ticks: { font: { family: 'Inter, sans-serif', size: 12, weight: 500 }, color: '#333', maxRotation: 45, minRotation: 25, autoSkip: false }, grid: { display: false } },
+            y: { stacked: true, beginAtZero: true, ticks: { font: { family: 'Inter, sans-serif', size: 11 }, color: '#888', callback: (v) => '$' + (v / 1000).toFixed(0) + 'k', stepSize: 2000 }, grid: { color: '#e8e8e6' }, border: { display: false } },
           },
           plugins: {
             legend: { display: false },
-            tooltip: {
-              backgroundColor: '#111',
-              padding: 12,
-              titleFont: { family: 'Inter, sans-serif', weight: 700, size: 13 },
-              bodyFont: { family: 'Inter, sans-serif', size: 12 },
+            tooltip: { backgroundColor: '#111', padding: 12, titleFont: { family: 'Inter, sans-serif', weight: 700, size: 13 }, bodyFont: { family: 'Inter, sans-serif', size: 12 },
               callbacks: {
                 title: (items) => sorted[items[0].dataIndex].name,
-                label: (ctx) => {
-                  const p = sorted[ctx.dataIndex];
-                  const t = getTotals(p, currentYears);
+                label: (ctx) => { const p = sorted[ctx.dataIndex]; const t = getTotals(p, currentYears);
                   if (ctx.dataset.label === 'Hardware') return 'Hardware: ' + fmt(t.hw);
-                  return 'Subscription: ' + fmt(t.sub) + ' (' + currentYears + 'y)';
-                },
-                afterBody: (items) => {
-                  const p = sorted[items[0].dataIndex];
-                  const t = getTotals(p, currentYears);
-                  return ['Total: ' + fmt(t.total)];
-                },
+                  return 'Subscription: ' + fmt(t.sub) + ' (' + currentYears + 'y)'; },
+                afterBody: (items) => { const p = sorted[items[0].dataIndex]; const t = getTotals(p, currentYears); return ['Total: ' + fmt(t.total)]; },
               },
             },
           },
@@ -1386,20 +842,16 @@
       });
     }
 
-    // ============== TABLE ==============
     function buildTable() {
       const tbody = document.getElementById('table-body');
       tbody.innerHTML = '';
       const live = getLiveProducts();
-
       const cats = ['Strength', 'Cardio', 'Sleep', 'Wearable'];
       cats.forEach((cat) => {
-        // Category header
         const hr = document.createElement('tr');
         hr.className = 'cat-row ' + cat.toLowerCase();
         hr.innerHTML = `<td colspan="9">${cat}</td>`;
         tbody.appendChild(hr);
-
         let items = live.filter((p) => p.cat === cat);
         if (cat === 'Strength') {
           const nonAmp = items.filter((p) => !p.isAmp);
@@ -1407,30 +859,17 @@
           const ampP = items.find((p) => p.ampType === 'proposed');
           items = [...nonAmp, ampC, ampP].filter(Boolean);
         }
-
         items.forEach((p) => {
-          const t1 = getTotals(p, 1);
-          const t2 = getTotals(p, 2);
-          const t3 = getTotals(p, 3);
-          // Spacer above amp rows so the outline reads as a contained box
-          if (p.isAmp) {
-            const sp = document.createElement('tr');
-            sp.className = 'amp-spacer';
-            sp.innerHTML = '<td colspan="9"></td>';
-            tbody.appendChild(sp);
-          }
+          const t1 = getTotals(p, 1), t2 = getTotals(p, 2), t3 = getTotals(p, 3);
+          if (p.isAmp) { const sp = document.createElement('tr'); sp.className = 'amp-spacer'; sp.innerHTML = '<td colspan="9"></td>'; tbody.appendChild(sp); }
           const tr = document.createElement('tr');
           if (p.isAmp) tr.className = 'amp-row ' + (p.ampType === 'current' ? 'amp1' : 'amp2');
           let moDisplay = fmtMo(p.mo) + '/mo';
-          if (p.special === 'tempo') {
-            moDisplay = `${fmtMo(p.mo)}/mo Y1, ${fmtMo(p.mo_after_y1)}/mo Y2+`;
-          }
+          if (p.special === 'tempo') moDisplay = `${fmtMo(p.mo)}/mo Y1, ${fmtMo(p.mo_after_y1)}/mo Y2+`;
           let hwDisplay = p.hw === 0 ? '—' : fmt(p.hw);
           if (p.id === 'peloton_rental') hwDisplay = fmt(p.hw) + ' setup';
           const pillClass = 'commitment-' + p.commitmentType;
-          const domain = (() => {
-            try { return new URL(p.url).hostname.replace('www.', ''); } catch { return p.url; }
-          })();
+          const domain = (() => { try { return new URL(p.url).hostname.replace('www.', ''); } catch { return p.url; } })();
           tr.innerHTML = `
             <td class="brand">${p.name}</td>
             <td class="right">${hwDisplay}</td>
@@ -1443,18 +882,11 @@
             <td><a href="${p.url}" target="_blank" rel="noopener" class="source-link">${domain} ↗</a></td>
           `;
           tbody.appendChild(tr);
-          // Spacer below amp row
-          if (p.isAmp) {
-            const sp = document.createElement('tr');
-            sp.className = 'amp-spacer';
-            sp.innerHTML = '<td colspan="9"></td>';
-            tbody.appendChild(sp);
-          }
+          if (p.isAmp) { const sp = document.createElement('tr'); sp.className = 'amp-spacer'; sp.innerHTML = '<td colspan="9"></td>'; tbody.appendChild(sp); }
         });
       });
     }
 
-    // ============== EVENTS ==============
     document.querySelectorAll('#year-toggle button').forEach((btn) => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('#year-toggle button').forEach((b) => b.classList.remove('active'));
@@ -1469,28 +901,25 @@
       document.getElementById(id).addEventListener('input', () => {
         buildChart();
         buildTable();
-        buildAppsChart();
+        if (appsChart) buildAppsChart();
         buildAppsTable();
       });
     });
 
-    // ============== APPS CHART ==============
     let appsChart;
-    let appsCurrentYears = 1;
+    let appsChartBuilt = false; // tracks whether the apps chart has ever been built on a visible canvas
+    let appsCurrentYears = 3;
 
-    // Get effective monthly cost for an app — prefer annual rate if available
     function appsEffMo(a) {
       if (a.mo_annual !== null && a.mo_annual !== undefined) return a.mo_annual;
       if (a.mo !== null && a.mo !== undefined) return a.mo;
       return 0;
     }
     function appsTotal(a, years) {
-      // 'monthly' means show 1 month of cost; otherwise years * 12 months
       if (years === 'monthly') return appsEffMo(a);
       return appsEffMo(a) * 12 * years;
     }
 
-    // Get live apps array — amp_proposed_app pulls from the editable input
     function getLiveApps() {
       const amp2Mo = parseFloat(document.getElementById('amp2_mo').value) || 0;
       return apps.map((a) => {
@@ -1520,14 +949,19 @@
         return a.name;
       });
       const totals = sorted.map((a) => appsTotal(a, appsCurrentYears));
-      // Color: Amp Current black, Amp Proposed orange, all competitors gray
       const colors = sorted.map((a) => {
         if (a.ampType === 'current') return '#111111';
         if (a.ampType === 'proposed') return '#d4501e';
         return '#a8a8a4';
       });
 
-      const ctx = document.getElementById('apps-chart').getContext('2d');
+      // FIX: Reset canvas attributes so Chart.js can re-measure correctly when the tab becomes visible
+      const canvas = document.getElementById('apps-chart');
+      canvas.removeAttribute('width');
+      canvas.removeAttribute('height');
+      canvas.style.width = '';
+      canvas.style.height = '';
+      const ctx = canvas.getContext('2d');
       if (appsChart) appsChart.destroy();
 
       appsChart = new Chart(ctx, {
@@ -1536,73 +970,30 @@
         data: {
           labels,
           datasets: [{
-            label: 'Subscription Cost',
-            data: totals,
-            backgroundColor: colors,
-            borderRadius: 4,
-            borderSkipped: false,
-            datalabels: {
-              display: true,
-              anchor: 'end',
-              align: 'top',
-              offset: 4,
-              color: '#111',
-              font: { family: 'Inter, sans-serif', weight: 700, size: 12 },
-              formatter: (v) => fmt(v),
-            },
+            label: 'Subscription Cost', data: totals, backgroundColor: colors, borderRadius: 4, borderSkipped: false,
+            datalabels: { display: true, anchor: 'end', align: 'top', offset: 4, color: '#111', font: { family: 'Inter, sans-serif', weight: 700, size: 12 }, formatter: (v) => fmt(v) },
           }],
         },
         options: {
-          maintainAspectRatio: false,
-          responsive: true,
-          layout: { padding: { top: 30 } },
+          maintainAspectRatio: false, responsive: true, layout: { padding: { top: 30 } },
           scales: {
-            x: {
-              ticks: {
-                font: { family: 'Inter, sans-serif', size: 12, weight: 500 },
-                color: '#333',
-                maxRotation: 30,
-                minRotation: 0,
-                autoSkip: false,
-              },
-              grid: { display: false },
-            },
-            y: {
-              beginAtZero: true,
-              ticks: {
-                font: { family: 'Inter, sans-serif', size: 11 },
-                color: '#888',
-                callback: (v) => '$' + (v).toLocaleString(),
-              },
-              grid: { color: '#e8e8e6' },
-              border: { display: false },
-            },
+            x: { ticks: { font: { family: 'Inter, sans-serif', size: 12, weight: 500 }, color: '#333', maxRotation: 30, minRotation: 0, autoSkip: false }, grid: { display: false } },
+            y: { beginAtZero: true, ticks: { font: { family: 'Inter, sans-serif', size: 11 }, color: '#888', callback: (v) => '$' + (v).toLocaleString() }, grid: { color: '#e8e8e6' }, border: { display: false } },
           },
           plugins: {
             legend: { display: false },
-            tooltip: {
-              backgroundColor: '#111',
-              padding: 12,
-              titleFont: { family: 'Inter, sans-serif', weight: 700, size: 13 },
-              bodyFont: { family: 'Inter, sans-serif', size: 12 },
+            tooltip: { backgroundColor: '#111', padding: 12, titleFont: { family: 'Inter, sans-serif', weight: 700, size: 13 }, bodyFont: { family: 'Inter, sans-serif', size: 12 },
               callbacks: {
                 title: (items) => sorted[items[0].dataIndex].name,
-                label: (ctx) => {
-                  const a = sorted[ctx.dataIndex];
-                  const eff = appsEffMo(a);
-                  if (appsCurrentYears === 'monthly') {
-                    return [`Effective: ${fmtMo(eff)}/mo`];
-                  }
-                  return [
-                    `Effective: ${fmtMo(eff)}/mo`,
-                    `${appsCurrentYears}-yr total: ${fmt(appsTotal(a, appsCurrentYears))}`,
-                  ];
-                },
+                label: (ctx) => { const a = sorted[ctx.dataIndex]; const eff = appsEffMo(a);
+                  if (appsCurrentYears === 'monthly') return [`Effective: ${fmtMo(eff)}/mo`];
+                  return [`Effective: ${fmtMo(eff)}/mo`, `${appsCurrentYears}-yr total: ${fmt(appsTotal(a, appsCurrentYears))}`]; },
               },
             },
           },
         },
       });
+      appsChartBuilt = true;
     }
 
     function buildAppsTable() {
@@ -1610,21 +1001,12 @@
       tbody.innerHTML = '';
       const liveApps = getLiveApps();
       liveApps.forEach((a) => {
-        const t1 = appsTotal(a, 1);
-        const t2 = appsTotal(a, 2);
-        const t3 = appsTotal(a, 3);
+        const t1 = appsTotal(a, 1), t2 = appsTotal(a, 2), t3 = appsTotal(a, 3);
         const moDisplay = a.mo === null ? '—' : (a.mo === 0 ? '$0' : fmtMo(a.mo) + '/mo');
         const annualDisplay = a.mo_annual === null ? '—' : (a.mo_annual === 0 ? '$0' : fmtMo(a.mo_annual) + '/mo');
         const pillClass = 'commitment-' + a.commitmentType;
         const domain = (() => { try { return new URL(a.url).hostname.replace('www.', ''); } catch { return a.url; } })();
-
-        // Add spacer above amp rows
-        if (a.isAmp) {
-          const sp = document.createElement('tr');
-          sp.className = 'amp-spacer';
-          sp.innerHTML = '<td colspan="9"></td>';
-          tbody.appendChild(sp);
-        }
+        if (a.isAmp) { const sp = document.createElement('tr'); sp.className = 'amp-spacer'; sp.innerHTML = '<td colspan="9"></td>'; tbody.appendChild(sp); }
         const tr = document.createElement('tr');
         if (a.isAmp) tr.className = 'amp-row ' + (a.ampType === 'current' ? 'amp1' : 'amp2');
         tr.innerHTML = `
@@ -1639,16 +1021,10 @@
           <td><a href="${a.url}" target="_blank" rel="noopener" class="source-link">${domain} ↗</a></td>
         `;
         tbody.appendChild(tr);
-        if (a.isAmp) {
-          const sp = document.createElement('tr');
-          sp.className = 'amp-spacer';
-          sp.innerHTML = '<td colspan="9"></td>';
-          tbody.appendChild(sp);
-        }
+        if (a.isAmp) { const sp = document.createElement('tr'); sp.className = 'amp-spacer'; sp.innerHTML = '<td colspan="9"></td>'; tbody.appendChild(sp); }
       });
     }
 
-    // Apps year toggle
     document.querySelectorAll('#apps-year-toggle button').forEach((btn) => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('#apps-year-toggle button').forEach((b) => b.classList.remove('active'));
@@ -1663,7 +1039,6 @@
       });
     });
 
-    // ============== TAB SWITCHING ==============
     document.querySelectorAll('.tab-btn').forEach((btn) => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.tab-btn').forEach((b) => b.classList.remove('active'));
@@ -1671,7 +1046,7 @@
         btn.classList.add('active');
         const tabId = 'tab-' + btn.dataset.tab;
         document.getElementById(tabId).classList.add('active');
-        // Force chart rebuild on tab switch (canvas needs to be visible to size correctly)
+        // FIX: build Apps chart only once its tab is visible (first time), then rebuild on subsequent visits
         if (btn.dataset.tab === 'apps') {
           setTimeout(() => buildAppsChart(), 50);
         } else {
@@ -1680,12 +1055,12 @@
       });
     });
 
-    // Initial render
+    // Initial render — build only the visible chart and both tables.
+    // The Apps chart is intentionally NOT built here; it builds the first time its tab opens,
+    // so its canvas has real width/height when Chart.js measures it.
     buildChart();
     buildTable();
-    buildAppsChart();
     buildAppsTable();
   </script>
-
 
 </body></html>
